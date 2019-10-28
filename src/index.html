@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
     <!--Primera pantalla-->
-    <div id="first-view" class="pantalla-uno"> 
+    <div id="first-view" class="screen-one"> 
       <img src="img/Pokemon_Go.png" alt="pokemon" class="image1" >
       <p class="welcome">¡Bienvenido a Pokémon GO! 
           Tu catálogo virtual que te brinda una gran variedad de información sobre cada Pokémon para que puedas conocerlos a todos y ser un maestro pokémon. </p>
-      <button id="start">Empezar</button>
+      <button id="btn-start">Empezar</button>
     </div>
     <!--Segunda pantalla-->
-      <div id="second-view" class="pantalla-dos hide">
+      <div id="second-view" class="hide">
         <img src="img/Pokemon_Go.png" alt="pokemon" class="image2" >
         <nav class="menu">
       <ul>
@@ -28,8 +29,8 @@
     </nav>
   </div>  
   </header>
-
-    <div id="root"></div>
+    <div id="root" class="hide"></div>
+  
     <script type="module" src="main.js"></script>
   </body>
 </html>

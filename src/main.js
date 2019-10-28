@@ -1,13 +1,14 @@
-const firstView = document.getElementById('first-view');
-const start = document.getElementById('start');
-const secondView = document.getElementById('second-view');
-start.addEventListener('click',() =>{
-    firstView.classList.add('hide');
-    secondView.classList.remove('hide');
-}
-);
 import POKEMON from './data/pokemon/pokemon.js';
-console.log(POKEMON);
+import { mostrarPokemon } from './data.js';
 
-import { example } from './data.js';
-console.log(example);
+const firstView = document.getElementById('first-view');
+const secondView = document.getElementById('second-view');
+const nodeFather = document.getElementById('root');
+const btnStart = document.getElementById('btn-start');
+
+btnStart.addEventListener('click', () => {
+  firstView.classList.add('hide');
+  secondView.classList.remove('hide');
+  nodeFather.classList.remove('hide');
+});
+nodeFather.innerHTML = mostrarPokemon(POKEMON);
