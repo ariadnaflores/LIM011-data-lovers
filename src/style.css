@@ -4,7 +4,8 @@
 body {
   background-image:url(img/background_desktop.jpg);
   background-repeat: no-repeat;
-  
+  background-attachment: fixed;
+  background-size: cover;  
 }
 .image1 {
   width: 400px;
