@@ -1,14 +1,14 @@
-
+import POKEMON from './data/pokemon/pokemon.js';
+import { mostrarPokemon } from './data.js';
 
 const firstView = document.getElementById('first-view');
-const start = document.getElementById('start');
 const secondView = document.getElementById('second-view');
-start.addEventListener('click',() =>{
-    firstView.classList.add('hide');
-    secondView.classList.remove('hide');
-}
-);
+const nodeFather = document.getElementById('root');
+const btnStart = document.getElementById('btn-start');
 
-import POKEMON from './data/pokemon/pokemon.js';
-console.log(POKEMON);
-
+btnStart.addEventListener('click', () => {
+  firstView.classList.add('hide');
+  secondView.classList.remove('hide');
+  nodeFather.classList.remove('hide');
+});
+nodeFather.innerHTML = mostrarPokemon(POKEMON);
