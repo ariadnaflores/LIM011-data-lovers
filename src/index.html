@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
     <!--Primera pantalla-->
-    <div id="primera-pantalla" class="pantalla-uno"> 
-    <h1>Probando Cambios :(</h1>
-    <p>Pokemon go</p>
-  </div>
+    <div id="first-view" class="pantalla-uno"> 
+      <img src="img/Pokemon_Go.png" alt="pokemon" class="image1" >
+      <p class="welcome">¡Bienvenido a Pokémon GO! 
+          Tu catálogo virtual que te brinda una gran variedad de información sobre cada Pokémon para que puedas conocerlos a todos y ser un maestro pokémon. </p>
+      <button id="start">Empezar</button>
+    </div>
+    <!--Segunda pantalla-->
+    <div id="second-view" class="pantalla-dos hide">
+      <img src="img/Pokemon_Go.png" alt="pokemon" class="image2" >
+      <nav class="menu">
+      <ul>
+        <li> <a href="">POKEDEX</a></li>
+        <li> <a href="">TOP 10</a></li>
+        <li> <a href="">TIPOS</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
     <div id="root"></div>
-    <script type="module" src="main.js"></script>
+    <script /*type="module"*/ src="main.js"></script>
   </body>
 </html>
