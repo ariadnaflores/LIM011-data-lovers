@@ -3,6 +3,8 @@
 }
 body {
   background-image:url(img/background_desktop.jpg);
+  background-repeat: no-repeat;
+  
 }
 .image1 {
   width: 400px;
