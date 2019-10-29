@@ -38,7 +38,7 @@ margin-top: 5px;
 margin-left: 45%;
 }
 .button-start:hover{
-background-color: white;
+background-color:#0BC6C0;
 }
 .image2 {
 width: 200px;
@@ -51,6 +51,9 @@ list-style: none;
 padding: 0;
 margin: 0;
 }
+.menu ul :hover{
+  background-color: #0BC6C0;
+  }
 .menu li {
 justify-content: space-around;
 flex-grow: 1;
@@ -77,4 +80,6 @@ float: left;
 flex-direction: column;
 text-align: center;
 flex-wrap: wrap;
+display: block;
 } 
+
