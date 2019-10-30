@@ -9,5 +9,4 @@ export const mostrarPokemon = (arr) => {
     </div>`;
   });
   return showPokemon;
-
 };

@@ -3,12 +3,14 @@ import { mostrarPokemon } from './data.js';
 
 const firstView = document.getElementById('first-view');
 const secondView = document.getElementById('second-view');
-const nodeFather = document.getElementById('root');
+const pokemonList = document.getElementById('pokemonList');
 const btnStart = document.getElementById('btn-start');
+const pokemonSection = document.getElementById('pokemonSection');
 
 btnStart.addEventListener('click', () => {
   firstView.classList.add('hide');
   secondView.classList.remove('hide');
-  nodeFather.classList.remove('hide');
+  pokemonSection.classList.remove('hide');
 });
-nodeFather.innerHTML = mostrarPokemon(POKEMON);
+pokemonList.innerHTML = mostrarPokemon(POKEMON);
+
