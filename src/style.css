@@ -9,7 +9,6 @@ background-size: cover;
 }
 .image1 {
 width: 400px;
-display:block;
 margin:auto;
 display:flex;
 }
@@ -42,7 +41,7 @@ background-color:#0BC6C0;
 }
 .image2 {
 width: 200px;
-display:block;
+display:flex;
 margin:auto;
 }
 .menu ul {
@@ -66,20 +65,17 @@ padding: 18px;
 background-color: #73DDAA;
 text-align: center;
 }
+.pokemonList{
+  display: flex;
+  flex-wrap: wrap;
+}
 .box{
-font-family: 'Saira', sans-serif;
-font-size: 100%;
-background-color:white;
-justify-content: space-between;
-margin-left: 4%;
-margin-top: 3%;
-width: 15%;
-height: 15%;
-position: relative;
-float: left;
-flex-direction: column;
-text-align: center;
-flex-wrap: wrap;
-display: block;
+  font-family: 'Saira', sans-serif;
+  font-size: 120%;
+  background-color:white;
+  border-radius: 15px;
+  margin-left: 4%;
+  margin-top: 4%;
+  width: 220px;
+  text-align: center
 } 
-
