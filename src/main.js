@@ -48,40 +48,9 @@ btnTypes.addEventListener('click', () => {
   pokemonSection.classList.remove('hide');
   mostrarPokemon(filter(POKEMON, 'Water'));
 });
-// Seleccion de tipos de pokemon
+// Seleccion y filtrado de tipos de pokemon
 const typeSelector = document.getElementById('typeselector');
 typeSelector.addEventListener('change', () => {
   const select = typeSelector.value;
-  if (select === '01') {
-    mostrarPokemon(filter(POKEMON, 'Water'));
-  } else if (select === '02') {
-    mostrarPokemon(filter(POKEMON, 'Bug'));
-  } else if (select === '03') {
-    mostrarPokemon(filter(POKEMON, 'Dragon'));
-  } else if (select === '04') {
-    mostrarPokemon(filter(POKEMON, 'Electric'));
-  } else if (select === '05') {
-    mostrarPokemon(filter(POKEMON, 'Ghost'));
-  } else if (select === '06') {
-    mostrarPokemon(filter(POKEMON, 'Fire'));
-  } else if (select === '07') {
-    mostrarPokemon(filter(POKEMON, 'Ice'));
-  } else if (select === '08') {
-    mostrarPokemon(filter(POKEMON, 'Fighting'));
-  } else if (select === '09') {
-    mostrarPokemon(filter(POKEMON, 'Normal'));
-  } else if (select === '10') {
-    mostrarPokemon(filter(POKEMON, 'Grass'));
-  } else if (select === '11') {
-    mostrarPokemon(filter(POKEMON, 'Psychic'));
-  } else if (select === '12') {
-    mostrarPokemon(filter(POKEMON, 'Rock'));
-  } else if (select === '13') {
-    mostrarPokemon(filter(POKEMON, 'Ground'));
-  } else if (select === '14') {
-    mostrarPokemon(filter(POKEMON, 'Poison'));
-  } else if (select === '15') {
-    mostrarPokemon(filter(POKEMON, 'Flying'));
-  }
+  return mostrarPokemon(filter(POKEMON, select));
 });
-
