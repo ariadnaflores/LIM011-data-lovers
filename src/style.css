@@ -2,80 +2,213 @@
   display: none;
 }
 body {
-background-image:url(img/background_desktop.jpg);
+background-image:url(img/background_pokemon.jpg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;  
 }
 .image1 {
-width: 400px;
-margin:auto;
-display:flex;
+width: 35%;
+margin-left: 2%;
+display: flex;
 }
 .welcome {
+padding: 3%;
+flex: auto;
 text-align: center;
-font-size: 30px;
-margin-top: 30px;
-font-family: 'Saira', sans-serif;
-color: #000000;
-background-color: white;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-margin-left: 25% ;
-margin-right: 25%;
+font-size: 25px;
+margin-top: 3%;
+font-family: 'Open Sans', sans-serif;
+color: white;
+background-color: rgba(51, 51, 51, 0.575);;
 }
 .button-start{
-font-family: 'Saira', sans-serif;
-font-size: 25px;
-box-sizing: border-box;
-border-radius: 20px;
+font-family: 'Orbitron', sans-serif;
+font-size: 20px;
+flex: auto;
+border-radius: 15px;
 border: 2px solid ;
-background-color: #73DDAA;;
-padding: 15px;
+color: white;
+background-color:rgba(240, 160, 49, 0.726);
+padding: 1%;
 cursor: pointer;
-margin-top: 5px;
 margin-left: 45%;
+margin-top: 1%;
 }
 .button-start:hover{
-background-color:#0BC6C0;
+background-color:#333;
 }
 .image2 {
-width: 200px;
+width: 300px;
 display:flex;
 margin:auto;
 }
-.menu ul {
-display: flex;
-list-style: none;
-padding: 0;
-margin: 0;
+ /* Estilos de la barra menu */
+ .header {
+  font-family: 'Orbitron', sans-serif;
+  background: #333;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap; 
+  font-size: 30px;
 }
-.menu ul :hover{
-  background-color: #0BC6C0;
-  }
-.menu li {
-justify-content: space-around;
-flex-grow: 1;
+.item-menu{
+  height: 70px;
+  flex-grow: 1;
+  color: white;
+  border-right: 2px solid white;
+  text-align: center;
+  list-style: none;
 }
-.menu li a {
+.item-menu:hover{
+  background-color:rgba(240, 160, 49, 0.726);
+  color: #333
+}
+
+.menu {
+  max-height: none;
+}
+
+/*menu icon*/
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  justify-content: flex-end;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.menu-icon .navicon {
+  background:white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.navicon:before,
+.navicon:after {
+background:white;
+content: '';
 display: block;
-font-family: 'Viga', sans-serif;
-font-size: 30px;
-padding: 18px;
-background-color: #73DDAA;
-text-align: center;
+height: 100%;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
 }
-.pokemonList{
+
+.menu-icon .navicon:before {
+top: 5px;
+}
+
+.navicon:after {
+  top: -5px;
+}
+
+/*menu btn*/
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+top: 0;
+}
+
+/*Pantallas medianas*/
+
+@media all and (max-width: 800px) {
+  .header {
+      justify-content: space-around;
+  }
+
+  .menu-icon {
+      display: none;
+  }
+}
+
+/*Pantallas pequeñas*/
+
+@media all and (max-width: 500px) {
+  .header {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+
+  }
+  .menu-icon {
+      display: inline-block;
+  }
+
+  .menu-btn:checked ~ .menu {
+      max-height: 240px;
+      display: flex;
+  }
+
+  .menu {
+      display: none;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+  }
+  }
+ /* Aquí empiezan los cards */
+
+ .pokemonList{
   display: flex;
   flex-wrap: wrap;
 }
-.box{
-  font-family: 'Saira', sans-serif;
-  font-size: 120%;
-  background-color:white;
-  border-radius: 15px;
-  margin-left: 4%;
-  margin-top: 4%;
-  width: 220px;
-  text-align: center
-} 
+
+.wrap{
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+}
+
+/* falta centrar los elementos verticalmente*/
+.adelante, .atras{
+  backface-visibility: hidden;
+	text-align: center;
+	color:white;
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(240, 160, 49, 0.726);
+  height: 300px;
+  flex: auto;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.atras{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height:100%;
+}
+
+.tarjeta{
+	transform-style: preserve-3d;
+  transition: .7s ease;
+}
+
+.atras{
+  transform: rotateY(180deg);
+  font-size: 80%;
+}
+.tarjeta-wrap:hover .tarjeta{
+  transform: rotateY(180deg);
+}

@@ -11,12 +11,29 @@ const pokemonSection = document.getElementById('pokemonSection');
 const mostrarPokemon = (arr) => {
   let showPokemon = '';
   arr.forEach((obj) => {
-    showPokemon += `
-    <div class='box'>
-    <img src='${obj.img}'/>
-    <p><b>${obj.name}</b></p>
-    <p>N° ${obj.num}</p>
-    </div>`;
+    showPokemon += ` 
+<div class="wrap">
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+      <div class='box adelante'>
+        <img class="img-styles" src='${obj.img}'/>
+        <p><b>${obj.name}</b></p>
+        <p>N° ${obj.num}</p>
+      </div> 
+
+      <div class='box atras' id='atras'> 
+        <p><b>${obj.name}</b></p>
+        <p>N° ${obj.num}</p>
+        <p>Altura: ${obj.height}</p>
+        <p>Peso: ${obj.weight}</p>
+        <p>Tipo:${obj.type}</p>
+        <p>Debilidades:${obj.weaknesses}</p>
+      </div>
+
+    </div>
+
+  </div>
+</div> `;
   });
   pokemonList.innerHTML = showPokemon;
 };
