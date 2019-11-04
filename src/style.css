@@ -2,7 +2,7 @@
   display: none;
 }
 body {
-background-image:url(img/background_pokemon.jpg);
+background-image:url(img/background_desktop.jpg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;  
@@ -29,14 +29,14 @@ flex: auto;
 border-radius: 15px;
 border: 2px solid ;
 color: white;
-background-color:rgba(240, 160, 49, 0.726);
+background-color:#333;
 padding: 1%;
 cursor: pointer;
 margin-left: 45%;
 margin-top: 1%;
 }
 .button-start:hover{
-background-color:#333;
+background-color: #063971;
 }
 .image2 {
 width: 300px;
@@ -51,6 +51,7 @@ margin:auto;
   justify-content: space-around;
   flex-flow: row nowrap; 
   font-size: 30px;
+  padding: 0%;
 }
 .item-menu{
   height: 70px;
@@ -61,8 +62,8 @@ margin:auto;
   list-style: none;
 }
 .item-menu:hover{
-  background-color:rgba(240, 160, 49, 0.726);
-  color: #333
+  background-color:#063971 ;
+  color: white;
 }
 
 .menu {
@@ -96,7 +97,7 @@ content: '';
 display: block;
 height: 100%;
 position: absolute;
-transition: all .2s ease-out;
+transition: all .2 ease-out;
 width: 100%;
 }
 
@@ -184,13 +185,14 @@ top: 0;
 .adelante, .atras{
   backface-visibility: hidden;
 	text-align: center;
-	color:white;
+	color:black;
   font-family: 'Open Sans', sans-serif;
-  background: rgba(240, 160, 49, 0.726);
+  background: rgba(201, 194, 184, 0.541);
   height: 300px;
   flex: auto;
   flex-direction: column;
   margin-top: 10px;
+  border-radius: 15%;
 }
 
 .atras{
