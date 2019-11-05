@@ -18,7 +18,7 @@
           Tu catálogo virtual que te brinda una gran variedad de información sobre cada Pokémon para que puedas conocerlos a todos y ser un maestro pokémon. </p>
       <button id="btn-start" class="button-start">Empezar</button>
     </div>
-    <!--Segunda pantalla-->
+    <!--Segunda pantalla-muestra pokedex por default-->
       <div id="second-view" class="hide">
         <img src="img/Pokemon_Go.png" alt="pokemon" class="image2" >
         <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -27,7 +27,7 @@
            <ul class="header menu">
             <li class="item-menu" id="btn-pokedex">POKEDEX</li>
             <li class="item-menu" id="topten">TOP 10</li>
-            <li class="item-menu" id="btn-types">TIPOS</li> 
+            <li class="item-menu" id="btn-types">FILTRAR</li> 
             </ul>
       </div>  
   </header>
@@ -36,7 +36,7 @@
       <div>
         <div id="filterList" class="hide">
           <select name="type" id="typeselector">
-            <option value="">Filtrar por tipo</option>
+            <option value="" disabled selected>Filtrar por tipo</option>
             <option value="Water">Agua</option>
             <option value="Bug">Bicho</option>
             <option value="Dragon">Dragón</option>
@@ -46,6 +46,25 @@
             <option value="Ice">Hielo</option>
             <option value="Fighting">Lucha</option>
             <option value="Normal">Normal</option>
+            <option value="Grass">Hierba</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Rock">Roca</option>
+            <option value="Ground">Tierra</option>
+            <option value="Poison">Veneno</option>
+            <option value="Flying">Volador</option>
+          </select>
+        </div> <br>
+        <div id="weaknessesList" class="hide">
+          <select name="type" id="weaknesses-selector">
+            <option value="" disabled selected>Filtrar por debilidad</option>
+            <option value="Water">Agua</option>
+            <option value="Bug">Bicho</option>
+            <option value="Dragon">Dragón</option>
+            <option value="Electric">Eléctrico</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Fire">Fuego</option>
+            <option value="Ice">Hielo</option>
+            <option value="Fighting">Lucha</option>
             <option value="Grass">Hierba</option>
             <option value="Psychic">Psíquico</option>
             <option value="Rock">Roca</option>

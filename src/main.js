@@ -46,12 +46,14 @@ btnStart.addEventListener('click', () => {
   mostrarPokemon(POKEMON);
 });
 const filterList = document.getElementById('filterList');
+const weaknessesList = document.getElementById('weaknessesList');
 
 // cambio de vista a pokedex
 const btnPokedex = document.getElementById('btn-pokedex');
 btnPokedex.addEventListener('click', () => {
   firstView.classList.add('hide');
   filterList.classList.add('hide');
+  weaknessesList.classList.add('hide');
   secondView.classList.remove('hide');
   pokemonSection.classList.remove('hide');
   mostrarPokemon(POKEMON);
@@ -62,12 +64,19 @@ btnTypes.addEventListener('click', () => {
   firstView.classList.add('hide');
   secondView.classList.remove('hide');
   filterList.classList.remove('hide');
+  weaknessesList.classList.remove('hide');
   pokemonSection.classList.remove('hide');
-  mostrarPokemon(filter(POKEMON, 'Water'));
+  mostrarPokemon(POKEMON);
 });
 // Seleccion y filtrado de tipos de pokemon
 const typeSelector = document.getElementById('typeselector');
 typeSelector.addEventListener('change', () => {
   const select = typeSelector.value;
-  return mostrarPokemon(filter(POKEMON, select));
+  mostrarPokemon(filter(POKEMON, select, 'type'));
+});
+// Seleccion y filtrado por debilidades
+const weaknessesSelector = document.getElementById('weaknesses-selector');
+weaknessesSelector.addEventListener('change', () => {
+  const select1 = weaknessesSelector.value;
+  mostrarPokemon(filter(POKEMON, select1, 'weaknesses'));
 });
