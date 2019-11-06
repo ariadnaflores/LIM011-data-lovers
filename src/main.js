@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import POKEMON from './data/pokemon/pokemon.js';
 import { filter } from './data.js';
 

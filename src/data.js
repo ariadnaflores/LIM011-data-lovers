@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* export const mostrarPokemon = (arr) => {
   let showPokemon = '';
   arr.forEach((obj) => {
@@ -19,13 +20,13 @@ export const filter = (arr, condition, option) => {
         if (arr[i].type[index] === condition) {
           element.push(arr[i]);
         }
-    }
-  } else if (option === 'weaknesses') {
-    for (let index = 0; index < arr[i].weaknesses.length; index += 1) {
-      if (arr[i].weaknesses[index] === condition) {
-        element.push(arr[i]);
+      }
+    } else if (option === 'weaknesses') {
+      for (let index = 0; index < arr[i].weaknesses.length; index += 1) {
+        if (arr[i].weaknesses[index] === condition) {
+          element.push(arr[i]);
+        }
       }
     }
-  }
   } return element;
-}
+};
