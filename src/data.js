@@ -1,17 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-/* export const mostrarPokemon = (arr) => {
-  let showPokemon = '';
-  arr.forEach((obj) => {
-    showPokemon += `
-    <div class='box'>
-    <img src='${obj.img}'/>
-    <p><b>${obj.name}</b></p>
-    <p>N° ${obj.num}</p>
-    </div>`;
-  });
-  return showPokemon;
-}; */
 
+// Funcion de filtrado por tipos de pokemon y debilidades
 export const filter = (arr, condition, option) => {
   const element = [];
   for (let i = 0; i < arr.length; i += 1) {
@@ -21,7 +10,7 @@ export const filter = (arr, condition, option) => {
           element.push(arr[i]);
         }
       }
-    } else if (option === 'weaknesses') {
+    } else {
       for (let index = 0; index < arr[i].weaknesses.length; index += 1) {
         if (arr[i].weaknesses[index] === condition) {
           element.push(arr[i]);
