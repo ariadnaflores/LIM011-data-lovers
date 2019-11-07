@@ -2,7 +2,7 @@
   display: none;
 }
 body {
-background-image:url(img/background_desktop.jpg);
+background-image:url(img/fondo1.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;  
@@ -53,6 +53,11 @@ margin:auto;
   font-size: 30px;
   padding: 0%;
 }
+.iconpokedex{
+  width: 50px;
+  text-align: center;
+  justify-content: flex-end;
+}
 .item-menu{
   height: 70px;
   flex-grow: 1;
@@ -89,7 +94,18 @@ margin:auto;
   transition: background .2s ease-out;
   width: 18px;
 }
-
+select {
+  background: white;
+  border: gray;
+  font-size: 18px;
+  height: 50px;
+  padding: 5px;
+  width: 250px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .navicon:before,
 .navicon:after {
 background:white;
@@ -167,6 +183,8 @@ top: 0;
       transition: max-height .2s ease-out;
   }
   }
+
+
  /* Aquí empiezan los cards */
 
  .pokemonList{
@@ -187,10 +205,10 @@ top: 0;
 	text-align: center;
 	color:black;
   font-family: 'Open Sans', sans-serif;
-  background: rgba(201, 194, 184, 0.541);
+  background: rgba(255, 255, 255, 0.87);
   height: 300px;
   flex: auto;
-  flex-direction: column;
+  
   margin-top: 10px;
   border-radius: 15%;
 }

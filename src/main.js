@@ -28,7 +28,7 @@ const mostrarPokemon = (arr) => {
         <p>Altura: ${obj.height}</p>
         <p>Peso: ${obj.weight}</p>
         <p>Tipo:${obj.type}</p>
-        <p>Debilidades:${obj.weaknesses}</p>
+        <p>Debilidades: <br>${obj.weaknesses}</p>
       </div>
 
     </div>
