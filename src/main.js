@@ -81,3 +81,12 @@ weaknessesSelector.addEventListener('change', () => {
   const select1 = weaknessesSelector.value;
   mostrarPokemon(filter(POKEMON, select1, 'weaknesses'));
 });
+/// Selección de buscar en la pokedex
+const searchPokemons = (pokemonList, inputValue) => {
+  return pokemonList.filter(obj => obj.name.toLowerCase().startsWith(inputValue));
+};
+const inputSearch = document.getElementById('input-search');
+inputSearch.addEventListener('input', event => {
+mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
+});
+
