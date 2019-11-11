@@ -69,6 +69,11 @@ btnTypes.addEventListener('click', () => {
   pokemonSection.classList.remove('hide');
   mostrarPokemon(POKEMON);
 });
+///Cambio de vista a los top 10
+const btnTop = document.getElementById('btn-topten');
+btnTop.addEventListener('click', ()  => {
+  mostrarPokemon(filterTopshow(POKEMON));
+ }); 
 // Seleccion y filtrado de tipos de pokemon
 const typeSelector = document.getElementById('typeselector');
 typeSelector.addEventListener('change', () => {
@@ -89,4 +94,8 @@ const inputSearch = document.getElementById('input-search');
 inputSearch.addEventListener('input', event => {
 mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
 });
+///Para que se muestre el top 10
+const filterTopshow = (allpokemons)  => {
+  return allpokemons.filter(obj=> obj.spawn_chance > 2.5)
+ }
 
