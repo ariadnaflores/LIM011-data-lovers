@@ -19,3 +19,52 @@ export const filter = (arr, condition, option) => {
     }
   } return element;
 };
+
+export const order = (arr, key, esperado) => {
+  let result;
+  if (key === 'name') {
+    if (esperado === 'a-z') {
+      result = arr.sort((a, b) => {
+        if (a.name > b.name) {
+          return 1;
+        } if (a.name < b.name) {
+          return -1;
+        }
+        return 0;
+      });
+    } else if (esperado === 'z-a') {
+      result = arr.sort((a, b) => {
+        if (a.name < b.name) {
+          return 1;
+        }
+        if (a.name > b.name) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+  } else if (key === 'id') {
+    if (esperado === 'asc') {
+      result = arr.sort((a, b) => {
+        if (a.id > b.id) {
+          return 1;
+        }
+        if (a.id < b.id) {
+          return -1;
+        }
+        return 0;
+      });
+    } else if (esperado === 'desc') {
+      result = arr.sort((a, b) => {
+        if (a.id < b.id) {
+          return 1;
+        }
+        if (a.id > b.id) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+  }
+  return result;
+};

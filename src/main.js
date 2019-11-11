@@ -1,6 +1,8 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable no-shadow */
 /* eslint-disable import/extensions */
 import POKEMON from './data/pokemon/pokemon.js';
-import { filter } from './data.js';
+import { filter, order } from './data.js';
 
 const firstView = document.getElementById('first-view');
 const secondView = document.getElementById('second-view');
@@ -17,33 +19,32 @@ const mostrarPokemon = (arr) => {
   <div class="tarjeta-wrap">
     <div class="tarjeta">
       <div class='box adelante'>
-        <img class="img-styles" src='${obj.img}'/>
-        <p><b>${obj.name}</b></p>
-        <p>N° ${obj.num}</p>
+      <div> <img class="img-styles" src='${obj.img}'/> </div>
+      <div> <p class="letter1"><b>${obj.name}</b></p> </div>
+      <div> <p class="letter2">N° ${obj.num}</p> </div>
       </div> 
-
       <div class='box atras' id='atras'> 
-        <p><b>${obj.name}</b></p>
-        <p>N° ${obj.num}</p>
-        <p>Altura: ${obj.height}</p>
-        <p>Peso: ${obj.weight}</p>
-        <p>Tipo:${obj.type}</p>
-        <p>Debilidades: <br>${obj.weaknesses}</p>
+        <p class="letter2">Altura: ${obj.height}</p>
+        <p class="letter2">Peso: ${obj.weight}</p>
+        <p class="letter2">Tipo:<br>${obj.type}</p>
+        <p class="letter2">Debilidades: <br>${obj.weaknesses}</p>
       </div>
-
     </div>
-
   </div>
 </div> `;
   });
   pokemonList.innerHTML = showPokemon;
 };
 
+const orderList = document.getElementById('orderList');
+const search = document.getElementById('search');
 // cambio de vista de pantalla de inicio a pokedex
 btnStart.addEventListener('click', () => {
   firstView.classList.add('hide');
   secondView.classList.remove('hide');
   pokemonSection.classList.remove('hide');
+  search.classList.remove('hide');
+  orderList.classList.remove('hide');
   mostrarPokemon(POKEMON);
 });
 const filterList = document.getElementById('filterList');
@@ -55,6 +56,8 @@ btnPokedex.addEventListener('click', () => {
   firstView.classList.add('hide');
   filterList.classList.add('hide');
   weaknessesList.classList.add('hide');
+  search.classList.remove('hide');
+  orderList.classList.remove('hide');
   secondView.classList.remove('hide');
   pokemonSection.classList.remove('hide');
   mostrarPokemon(POKEMON);
@@ -63,17 +66,25 @@ btnPokedex.addEventListener('click', () => {
 const btnTypes = document.getElementById('btn-types');
 btnTypes.addEventListener('click', () => {
   firstView.classList.add('hide');
+  orderList.classList.add('hide');
+  search.classList.add('hide');
   secondView.classList.remove('hide');
   filterList.classList.remove('hide');
   weaknessesList.classList.remove('hide');
   pokemonSection.classList.remove('hide');
   mostrarPokemon(POKEMON);
 });
-///Cambio de vista a los top 10
-const btnTop = document.getElementById('btn-topten');
-btnTop.addEventListener('click', ()  => {
-  mostrarPokemon(filterTopshow(POKEMON));
- }); 
+
+// Orden por id y name
+const orderSelector = document.getElementById('orderselector');
+orderSelector.addEventListener('change', () => {
+  const select2 = orderSelector.value;
+  if (select2 === 'asc' || select2 === 'desc') {
+    return mostrarPokemon(order(POKEMON, 'id', select2));
+  }
+  return mostrarPokemon(order(POKEMON, 'name', select2));
+});
+
 // Seleccion y filtrado de tipos de pokemon
 const typeSelector = document.getElementById('typeselector');
 typeSelector.addEventListener('change', () => {
@@ -86,16 +97,22 @@ weaknessesSelector.addEventListener('change', () => {
   const select1 = weaknessesSelector.value;
   mostrarPokemon(filter(POKEMON, select1, 'weaknesses'));
 });
-/// Selección de buscar en la pokedex
+// Selección de buscar en la pokedex
 const searchPokemons = (pokemonList, inputValue) => {
-  return pokemonList.filter(obj => obj.name.toLowerCase().startsWith(inputValue));
+  return pokemonList.filter((obj) => obj.name.toLowerCase().startsWith(inputValue));
 };
 const inputSearch = document.getElementById('input-search');
-inputSearch.addEventListener('input', event => {
-mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
+inputSearch.addEventListener('input', (event) => {
+  mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
 });
-///Para que se muestre el top 10
-const filterTopshow = (allpokemons)  => {
-  return allpokemons.filter(obj=> obj.spawn_chance > 2.5)
- }
-
+// Para que se muestre el top 10
+const filterTopshow = (allpokemons) => {
+  return allpokemons.filter((obj) => obj.spawn_chance > 2.5);
+};
+// Cambio de vista a los top 10
+const btnTop = document.getElementById('btn-topten');
+btnTop.addEventListener('click', () => {
+  mostrarPokemon(filterTopshow(POKEMON));
+  orderList.classList.add('hide');
+  search.classList.add('hide');
+});
