@@ -54,9 +54,8 @@ margin:auto;
   padding: 0%;
 }
 .iconpokedex{
-  width: 50px;
-  text-align: center;
-  justify-content: flex-end;
+  height: 40px;
+  margin-top: 10px;
 }
 .item-menu{
   height: 70px;
@@ -94,18 +93,7 @@ margin:auto;
   transition: background .2s ease-out;
   width: 18px;
 }
-select {
-  background: white;
-  border: gray;
-  font-size: 18px;
-  height: 50px;
-  padding: 5px;
-  width: 250px;
-  font-family: 'Orbitron', sans-serif;
-  border-radius: 8px;
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .navicon:before,
 .navicon:after {
 background:white;
@@ -124,6 +112,25 @@ top: 5px;
 .navicon:after {
   top: -5px;
 }
+
+/*Buscador y filtros */
+
+.pokedexSection, .filterSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+select, .search {
+  border: #333;
+  font-size: 18px;
+  height: 50px;
+  padding: 5px;
+  width: 250px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+}
+
 
 /*menu btn*/
 
@@ -182,8 +189,7 @@ top: 0;
       max-height: 0;
       transition: max-height .2s ease-out;
   }
-  }
-
+}
 
  /* Aquí empiezan los cards */
 
@@ -193,7 +199,7 @@ top: 0;
 }
 
 .wrap{
-  width: 280px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 28px;
@@ -206,20 +212,30 @@ top: 0;
 	color:black;
   font-family: 'Open Sans', sans-serif;
   background: rgba(255, 255, 255, 0.87);
-  height: 300px;
+  height: 350px;
   flex: auto;
-  
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .atras{
   position: absolute;
   top: 0px;
   width: 100%;
   height:100%;
 }
+.img-styles {
+  height: 150px;
+}
+.letter1 {
+  font-size: 22px;
 
+}
+.letter2 {
+  font-size: 18px;
+}
 .tarjeta{
 	transform-style: preserve-3d;
   transition: .7s ease;
@@ -227,7 +243,7 @@ top: 0;
 
 .atras{
   transform: rotateY(180deg);
-  font-size: 80%;
+  font-size: 70%;
 }
 .tarjeta-wrap:hover .tarjeta{
   transform: rotateY(180deg);
