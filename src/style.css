@@ -130,6 +130,16 @@ select, .search {
   font-family: 'Orbitron', sans-serif;
   border-radius: 8px;
 }
+.searchstyle {
+  background: white;
+  border: none;
+  font-size: 30px;
+  align-items: center;
+  
+}
+.lupa{
+  width: 40px;
+}
 
 
 /*menu btn*/

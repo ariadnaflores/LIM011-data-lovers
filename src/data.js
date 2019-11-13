@@ -1,20 +1,12 @@
 /* eslint-disable import/prefer-default-export */
 
 // Funcion de filtrado por tipos de pokemon y debilidades
-export const filter = (arr, condition, option) => {
+export const filter = (arr, propiedad, condition) => {
   const element = [];
   for (let i = 0; i < arr.length; i += 1) {
-    if (option === 'type') {
-      for (let index = 0; index < arr[i].type.length; index += 1) {
-        if (arr[i].type[index] === condition) {
-          element.push(arr[i]);
-        }
-      }
-    } else {
-      for (let index = 0; index < arr[i].weaknesses.length; index += 1) {
-        if (arr[i].weaknesses[index] === condition) {
-          element.push(arr[i]);
-        }
+    for (let index = 0; index < arr[i][propiedad].length; index += 1) {
+      if (arr[i][propiedad][index] === condition) {
+        element.push(arr[i]);
       }
     }
   } return element;

@@ -25,10 +25,10 @@ describe('filter', () => {
   });
   describe('filter', () => {
     it('debería retornar un array con los pokemones de tipo hierba', () => {
-      expect(filter(firstInput, 'Grass', 'type')).toEqual(firstOutput);
+      expect(filter(firstInput, 'type', 'Grass')).toEqual(firstOutput);
     });
     it('debería retornar un array con los pokemones con debilidad agua', () => {
-      expect(filter(firstInput, 'Water', 'weaknesses')).toEqual(secondOutput);
+      expect(filter(firstInput, 'weaknesses', 'Water')).toEqual(secondOutput);
     });
   });
 });

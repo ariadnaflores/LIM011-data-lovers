@@ -89,13 +89,13 @@ orderSelector.addEventListener('change', () => {
 const typeSelector = document.getElementById('typeselector');
 typeSelector.addEventListener('change', () => {
   const select = typeSelector.value;
-  mostrarPokemon(filter(POKEMON, select, 'type'));
+  mostrarPokemon(filter(POKEMON, 'type', select));
 });
 // Seleccion y filtrado por debilidades
 const weaknessesSelector = document.getElementById('weaknesses-selector');
 weaknessesSelector.addEventListener('change', () => {
   const select1 = weaknessesSelector.value;
-  mostrarPokemon(filter(POKEMON, select1, 'weaknesses'));
+  mostrarPokemon(filter(POKEMON, 'weaknesses', select1));
 });
 // Selección de buscar en la pokedex
 const searchPokemons = (pokemonList, inputValue) => {
@@ -104,6 +104,10 @@ const searchPokemons = (pokemonList, inputValue) => {
 const inputSearch = document.getElementById('input-search');
 inputSearch.addEventListener('input', (event) => {
   mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
+});
+// esconder la lupa
+inputSearch.addEventListener('click', () => {
+  document.getElementById('btn-search').classList.add('hide');
 });
 // Para que se muestre el top 10
 const filterTopshow = (allpokemons) => {
