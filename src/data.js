@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 /* eslint-disable import/prefer-default-export */
 
 // Funcion de filtrado por tipos de pokemon y debilidades
@@ -12,51 +14,24 @@ export const filter = (arr, propiedad, condition) => {
   } return element;
 };
 
-export const order = (arr, key, esperado) => {
+export const order = (arr, propiedad, condition) => {
   let result;
-  if (key === 'name') {
-    if (esperado === 'a-z') {
-      result = arr.sort((a, b) => {
-        if (a.name > b.name) {
-          return 1;
-        } if (a.name < b.name) {
-          return -1;
-        }
-        return 0;
-      });
-    } else if (esperado === 'z-a') {
-      result = arr.sort((a, b) => {
-        if (a.name < b.name) {
-          return 1;
-        }
-        if (a.name > b.name) {
-          return -1;
-        }
-        return 0;
-      });
-    }
-  } else if (key === 'id') {
-    if (esperado === 'asc') {
-      result = arr.sort((a, b) => {
-        if (a.id > b.id) {
-          return 1;
-        }
-        if (a.id < b.id) {
-          return -1;
-        }
-        return 0;
-      });
-    } else if (esperado === 'desc') {
-      result = arr.sort((a, b) => {
-        if (a.id < b.id) {
-          return 1;
-        }
-        if (a.id > b.id) {
-          return -1;
-        }
-        return 0;
-      });
-    }
+  if (condition === 'a-z' || condition === 'asc') {
+    result = arr.sort((a, b) => {
+      if (a[propiedad] > b[propiedad]) {
+        return 1;
+      } if (a[propiedad] < b[propiedad]) {
+        return -1;
+      }
+    });
+  } else if (condition === 'z-a' || condition === 'desc') {
+    result = arr.sort((a, b) => {
+      if (a[propiedad] < b[propiedad]) {
+        return 1;
+      } if (a[propiedad] > b[propiedad]) {
+        return -1;
+      }
+    });
   }
   return result;
 };
