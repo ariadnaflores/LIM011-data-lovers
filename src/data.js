@@ -17,24 +17,13 @@ export const filter = (arr, propiedad, condition) => {
 export const order = (arr, propiedad, condition) => {
   let result;
   if (condition === 'a-z' || condition === 'asc') {
-    result = arr.sort((a, b) => {
-      if (a[propiedad] > b[propiedad]) {
-        return 1;
-      } if (a[propiedad] < b[propiedad]) {
-        return -1;
-      }
-    });
-  } else if (condition === 'z-a' || condition === 'desc') {
-    result = arr.sort((a, b) => {
-      if (a[propiedad] < b[propiedad]) {
-        return 1;
-      } if (a[propiedad] > b[propiedad]) {
-        return -1;
-      }
-    });
+    result = arr.sort((a, b) => (a[propiedad] > b[propiedad] ? 1 : -1));
+  } else {
+    result = arr.sort((a, b) => (a[propiedad] < b[propiedad] ? 1 : -1));
   }
   return result;
 };
+
 export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
   (obj) => obj.name.toLowerCase().startsWith(inputValue),
 );
