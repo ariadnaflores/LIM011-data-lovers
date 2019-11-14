@@ -9,6 +9,13 @@ const firstInput = [
   { id: 4, name: 'Charmander', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
   { id: 5, name: 'Charmeleon', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
 ];
+const secondInput = [
+  { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 3, name: 'Venusaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 5, name: 'Charmeleon', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
+  { id: 4, name: 'Charmander', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
+];
 const firstOutput = [
   { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
   { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
@@ -39,6 +46,13 @@ const fifthOutput = [
   { id: 4, name: 'Charmander', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
   { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
 ];
+const sixthOutput = [
+  { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 3, name: 'Venusaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 4, name: 'Charmander', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
+  { id: 5, name: 'Charmeleon', type: ['Fire'], weaknesses: ['Water', 'Ground', 'Rock'] },
+];
 
 describe('filter', () => {
   it('debería ser una función', () => {
@@ -59,13 +73,16 @@ describe('order', () => {
   });
   describe('order', () => {
     it('debería retornar un array con los pokemones ordenados en forma descendente por id', () => {
-      expect(order(firstInput, 'id', 'desc')).toEqual(thirdOutput);
+      expect(order(secondInput, 'id', 'desc')).toEqual(thirdOutput);
     });
     it('debería retornar un array con los pokemones ordenados por nombre a-z', () => {
-      expect(order(firstInput, 'name', 'a-z')).toEqual(fourthOutput);
+      expect(order(secondInput, 'name', 'a-z')).toEqual(fourthOutput);
     });
     it('debería retornar un array con los pokemones ordenados por nombre z-a', () => {
-      expect(order(firstInput, 'name', 'z-a')).toEqual(fifthOutput);
+      expect(order(secondInput, 'name', 'z-a')).toEqual(fifthOutput);
+    });
+    it('debería retornar un array con los pokemones ordenados en forma ascendente por id', () => {
+      expect(order(secondInput, 'id', 'asc')).toEqual(sixthOutput);
     });
   });
 });
