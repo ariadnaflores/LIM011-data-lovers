@@ -1,8 +1,9 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable no-shadow */
 /* eslint-disable import/extensions */
+/* eslint-disable object-curly-newline */
 import POKEMON from './data/pokemon/pokemon.js';
-import { filter, order } from './data.js';
+import { filter, order, searchPokemons, filterTopshow } from './data.js';
 
 const firstView = document.getElementById('first-view');
 const secondView = document.getElementById('second-view');
@@ -98,9 +99,6 @@ weaknessesSelector.addEventListener('change', () => {
   mostrarPokemon(filter(POKEMON, 'weaknesses', select1));
 });
 // Selección de buscar en la pokedex
-const searchPokemons = (pokemonList, inputValue) => {
-  return pokemonList.filter((obj) => obj.name.toLowerCase().startsWith(inputValue));
-};
 const inputSearch = document.getElementById('input-search');
 inputSearch.addEventListener('input', (event) => {
   mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
@@ -109,10 +107,6 @@ inputSearch.addEventListener('input', (event) => {
 inputSearch.addEventListener('click', () => {
   document.getElementById('btn-search').classList.add('hide');
 });
-// Para que se muestre el top 10
-const filterTopshow = (allpokemons) => {
-  return allpokemons.filter((obj) => obj.spawn_chance > 2.5);
-};
 // Cambio de vista a los top 10
 const btnTop = document.getElementById('btn-topten');
 btnTop.addEventListener('click', () => {

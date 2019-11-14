@@ -35,3 +35,9 @@ export const order = (arr, propiedad, condition) => {
   }
   return result;
 };
+export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
+  (obj) => obj.name.toLowerCase().startsWith(inputValue),
+);
+export const filterTopshow = (allpokemons) => allpokemons.filter(
+  (obj) => obj.spawn_chance > 2.5,
+);

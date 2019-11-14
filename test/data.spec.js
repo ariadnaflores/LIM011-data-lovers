@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 // importamos la función `example`
-import { filter, order } from '../src/data';
+import { filter, order, searchPokemons, filterTopshow } from '../src/data';
 
 const firstInput = [
   { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
@@ -67,5 +67,33 @@ describe('order', () => {
     it('debería retornar un array con los pokemones ordenados por nombre z-a', () => {
       expect(order(firstInput, 'name', 'z-a')).toEqual(fifthOutput);
     });
+  });
+});
+const searchInput = [
+  { id: 3, name: 'Venusaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
+  { id: 4, num: '004', name: 'Charmander', type: ['Fire'], height: '0.61 m', weight: '8.5 kg', weaknesses: ['Water', 'Ground', 'Rock'] },
+  { id: 6, num: '006', name: 'Charizard', type: ['Fire', 'Flying'], height: '1.70 m', weight: '90.5 kg', weaknesses: ['Water', 'Electric', 'Rock'] },
+];
+const searchOutput = [
+  { id: 4, num: '004', name: 'Charmander', type: ['Fire'], height: '0.61 m', weight: '8.5 kg', weaknesses: ['Water', 'Ground', 'Rock'] },
+  { id: 6, num: '006', name: 'Charizard', type: ['Fire', 'Flying'], height: '1.70 m', weight: '90.5 kg', weaknesses: ['Water', 'Electric', 'Rock'] },
+];
+describe('searchPokemons', () => {
+  it('debería retornar un array con los pokemones cuyo nombre empiecen con c', () => {
+    expect(searchPokemons(searchInput, 'c')).toEqual(searchOutput);
+  });
+});
+const spawnchanceInput = [
+  { id: 4, name: 'Charmander', type: ['Fire'], spawn_chance: 0.253, weaknesses: ['Water', 'Ground', 'Rock'] },
+  { id: 5, name: 'Charmeleon', type: ['Fire'], spawn_chance: 0.012, weaknesses: ['Water', 'Ground', 'Rock'] },
+  { id: 41, num: '041', name: 'Zubat', type: ['Poison', 'Flying'], spawn_chance: 6.52, weaknesses: ['Electric', 'Ice', 'Psychic', 'Rock'] },
+];
+const spawnchanceOutput = [
+  { id: 41, num: '041', name: 'Zubat', type: ['Poison', 'Flying'], spawn_chance: 6.52, weaknesses: ['Electric', 'Ice', 'Psychic', 'Rock'] },
+];
+describe('filterTopshow', () => {
+  it('debería retornar un array con los pokemones ordenados por propiedad spawn_chance', () => {
+    expect(filterTopshow(spawnchanceInput)).toEqual(spawnchanceOutput);
   });
 });

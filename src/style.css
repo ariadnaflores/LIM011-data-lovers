@@ -2,30 +2,27 @@
   display: none;
 }
 body {
-background-image:url(img/fondo1.png);
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;  
+  background-image:url(img/fondo1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  
 }
 .image1 {
-width: 35%;
-margin-left: 2%;
-display: flex;
+  width: 35%;
+  margin-left: 2%;
+  display: flex;
 }
 .welcome {
-padding: 3%;
-flex: auto;
-text-align: center;
-font-size: 25px;
-margin-top: 3%;
-font-family: 'Open Sans', sans-serif;
-color: white;
-background-color: rgba(51, 51, 51, 0.575);;
+  padding: 3%;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: rgba(51, 51, 51, 0.575);;
 }
 .button-start{
 font-family: 'Orbitron', sans-serif;
 font-size: 20px;
-flex: auto;
 border-radius: 15px;
 border: 2px solid ;
 color: white;
@@ -33,7 +30,6 @@ background-color:#333;
 padding: 1%;
 cursor: pointer;
 margin-left: 45%;
-margin-top: 1%;
 }
 .button-start:hover{
 background-color: #063971;
@@ -48,8 +44,6 @@ margin:auto;
   font-family: 'Orbitron', sans-serif;
   background: #333;
   display: flex;
-  justify-content: space-around;
-  flex-flow: row nowrap; 
   font-size: 30px;
   padding: 0%;
 }
@@ -67,22 +61,12 @@ margin:auto;
 }
 .item-menu:hover{
   background-color:#063971 ;
-  color: white;
 }
-
-.menu {
-  max-height: none;
-}
-
 /*menu icon*/
-
 .menu-icon {
-  cursor: pointer;
   display: none;
-  justify-content: flex-end;
   padding: 28px 20px;
   position: relative;
-  user-select: none;
 }
 
 .menu-icon .navicon {
@@ -90,31 +74,25 @@ margin:auto;
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
   width: 18px;
 }
 
 .navicon:before,
 .navicon:after {
-background:white;
-content: '';
-display: block;
-height: 100%;
-position: absolute;
-transition: all .2 ease-out;
-width: 100%;
+  background:white;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
-
 .menu-icon .navicon:before {
-top: 5px;
+  top: 5px;
 }
-
 .navicon:after {
   top: -5px;
 }
 
 /*Buscador y filtros */
-
 .pokedexSection, .filterSection {
   display: flex;
   flex-direction: row;
@@ -135,87 +113,67 @@ select, .search {
   border: none;
   font-size: 30px;
   align-items: center;
-  
 }
 .lupa{
   width: 40px;
 }
 
-
 /*menu btn*/
-
 .menu-btn {
   display: none;
 }
-
 .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
-
 .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
-
 .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
-
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-top: 0;
+.menu-btn:checked ~ .menu-icon .navicon:before,
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  top: 0;
 }
 
 /*Pantallas medianas*/
-
 @media all and (max-width: 800px) {
   .header {
-      justify-content: space-around;
+    justify-content: space-around;
   }
-
   .menu-icon {
-      display: none;
+    display: none;
   }
 }
 
 /*Pantallas pequeñas*/
-
 @media all and (max-width: 500px) {
   .header {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
-
   }
   .menu-icon {
-      display: inline-block;
+    display: inline-block;
   }
-
   .menu-btn:checked ~ .menu {
-      max-height: 240px;
-      display: flex;
+    max-height: 240px;
+    display: flex;
   }
-
   .menu {
-      display: none;
-      max-height: 0;
-      transition: max-height .2s ease-out;
+    display: none;
   }
 }
-
  /* Aquí empiezan los cards */
-
  .pokemonList{
   display: flex;
   flex-wrap: wrap;
 }
-
 .wrap{
   width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 28px;
 }
-
-/* falta centrar los elementos verticalmente*/
 .adelante, .atras{
   backface-visibility: hidden;
 	text-align: center;
@@ -223,7 +181,6 @@ top: 0;
   font-family: 'Open Sans', sans-serif;
   background: rgba(255, 255, 255, 0.87);
   height: 350px;
-  flex: auto;
   margin-top: 20px;
   border-radius: 15%;
   display: flex;
@@ -234,14 +191,13 @@ top: 0;
   position: absolute;
   top: 0px;
   width: 100%;
-  height:100%;
 }
 .img-styles {
   height: 150px;
 }
+ /* letter 1 card adelante letter2 card atras */
 .letter1 {
   font-size: 22px;
-
 }
 .letter2 {
   font-size: 18px;
@@ -250,10 +206,8 @@ top: 0;
 	transform-style: preserve-3d;
   transition: .7s ease;
 }
-
 .atras{
   transform: rotateY(180deg);
-  font-size: 70%;
 }
 .tarjeta-wrap:hover .tarjeta{
   transform: rotateY(180deg);
