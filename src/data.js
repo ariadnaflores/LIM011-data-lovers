@@ -30,3 +30,9 @@ export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
 export const filterTopshow = (allpokemons) => allpokemons.filter(
   (obj) => obj.spawn_chance > 2.5,
 );
+
+export const calcular = (array, nombre, caramelo) => {
+  const filtrado1 = array.filter((obj) => obj.name === nombre);
+  const caramelofaltante = filtrado1[0].candy_count - caramelo;
+  return caramelofaltante;
+};
