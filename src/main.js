@@ -5,6 +5,7 @@
 import POKEMON from './data/pokemon/pokemon.js';
 import { filter, order, searchPokemons, filterTopshow, calcular } from './data.js';
 
+// Declaración de variables
 const firstView = document.getElementById('first-view');
 const secondView = document.getElementById('second-view');
 const pokemonList = document.getElementById('pokemonList');
@@ -39,7 +40,7 @@ const mostrarPokemon = (arr) => {
 
 const orderList = document.getElementById('orderList');
 const search = document.getElementById('search');
-// cambio de vista de pantalla de inicio a pokedex
+// Cambio de vista de pantalla de inicio a segunda pantalla
 btnStart.addEventListener('click', () => {
   firstView.classList.add('hide');
   secondView.classList.remove('hide');
@@ -48,11 +49,11 @@ btnStart.addEventListener('click', () => {
   orderList.classList.remove('hide');
   mostrarPokemon(POKEMON);
 });
+
 const filterList = document.getElementById('filterList');
 const weaknessesList = document.getElementById('weaknessesList');
 const evolutionSection = document.getElementById('evolutionSection');
-
-// cambio de vista a pokedex
+// Cambio de vista a pokedex
 const btnPokedex = document.getElementById('btn-pokedex');
 btnPokedex.addEventListener('click', () => {
   firstView.classList.add('hide');
@@ -65,7 +66,7 @@ btnPokedex.addEventListener('click', () => {
   pokemonSection.classList.remove('hide');
   mostrarPokemon(POKEMON);
 });
-// cambio de vista a tipos
+// Cambio de vista a tipos
 const btnTypes = document.getElementById('btn-types');
 btnTypes.addEventListener('click', () => {
   firstView.classList.add('hide');
@@ -79,7 +80,7 @@ btnTypes.addEventListener('click', () => {
   mostrarPokemon(POKEMON);
 });
 
-// Orden por id y name
+// Orden por identificador y nombre
 const orderSelector = document.getElementById('orderselector');
 orderSelector.addEventListener('change', () => {
   const select2 = orderSelector.value;
@@ -89,28 +90,31 @@ orderSelector.addEventListener('change', () => {
   return mostrarPokemon(order(POKEMON, 'name', select2));
 });
 
-// Seleccion y filtrado de tipos de pokemon
+// Selección y filtrado de tipos de pokemon
 const typeSelector = document.getElementById('typeselector');
 typeSelector.addEventListener('change', () => {
   const select = typeSelector.value;
   mostrarPokemon(filter(POKEMON, 'type', select));
 });
+
 // Seleccion y filtrado por debilidades
 const weaknessesSelector = document.getElementById('weaknesses-selector');
 weaknessesSelector.addEventListener('change', () => {
   const select1 = weaknessesSelector.value;
   mostrarPokemon(filter(POKEMON, 'weaknesses', select1));
 });
+
 // Selección de buscar en la pokedex
 const inputSearch = document.getElementById('input-search');
 inputSearch.addEventListener('input', (event) => {
   mostrarPokemon(searchPokemons(POKEMON, event.target.value.toLowerCase()));
 });
-// esconder la lupa
+// Esconder la lupa
 inputSearch.addEventListener('click', () => {
   document.getElementById('btn-search').classList.add('hide');
 });
-// Cambio de vista a los top 10
+
+// Cambio de vista a los top 10 con mayor frecuencia de aparición
 const btnTop = document.getElementById('btn-topten');
 btnTop.addEventListener('click', () => {
   mostrarPokemon(filterTopshow(POKEMON));
@@ -120,6 +124,7 @@ btnTop.addEventListener('click', () => {
   filterList.classList.add('hide');
   weaknessesList.classList.add('hide');
 });
+
 // Cambio de vista a Evolucion
 const btnEvolution = document.getElementById('btn-evolution');
 btnEvolution.addEventListener('click', () => {
@@ -130,11 +135,11 @@ btnEvolution.addEventListener('click', () => {
   search.classList.add('hide');
   pokemonList.innerHTML = '';
 });
-// Caalcular el numero de caramelos para la siguiente evolucion
+
 const namePokemon = document.getElementById('namepokemon');
 const numCaramelos = document.getElementById('numcaramelos');
 const btnCalcular = document.getElementById('btn-calcular');
-
+// Calcular el numero de caramelos para la siguiente evolucion
 btnCalcular.addEventListener('click', () => {
   const candy = calcular(POKEMON, namePokemon.value, numCaramelos.value);
   const filtrado1 = POKEMON.filter((obj) => obj.name === namePokemon.value);

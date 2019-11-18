@@ -2,7 +2,7 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable import/prefer-default-export */
 
-// Funcion de filtrado por tipos de pokemon y debilidades
+// Función de filtrado por tipos de pokemon y debilidades
 export const filter = (arr, propiedad, condition) => {
   const element = [];
   for (let i = 0; i < arr.length; i += 1) {
@@ -13,7 +13,7 @@ export const filter = (arr, propiedad, condition) => {
     }
   } return element;
 };
-
+// Función de ordenado por identificador y nombre
 export const order = (arr, propiedad, condition) => {
   let result;
   if (condition === 'a-z' || condition === 'asc') {
@@ -24,13 +24,17 @@ export const order = (arr, propiedad, condition) => {
   return result;
 };
 
+// Función de buscar 
 export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
   (obj) => obj.name.toLowerCase().startsWith(inputValue),
 );
+
+// Función de aparición top 10 más frecuentes
 export const filterTopshow = (allpokemons) => allpokemons.filter(
   (obj) => obj.spawn_chance > 2.5,
 );
 
+// Función de calcular los caramelos para la siguiente evolución 
 export const calcular = (array, nombre, caramelo) => {
   const filtrado1 = array.filter((obj) => obj.name === nombre);
   const caramelofaltante = filtrado1[0].candy_count - caramelo;

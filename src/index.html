@@ -11,16 +11,16 @@
   </head>
   <body>
     <header>
- <!--Primera pantalla-->
- <div id="first-view" class="screen-one"> 
+ <!--Pantalla de bienvenida-->
+  <div id="first-view" class="screen-one"> 
   <img src="img/Pokemon_Go.png" alt="pokemon" class="image1">
   <p class="welcome">¡Bienvenido a Pokémon GO! 
       Tu catálogo virtual que te brinda una gran variedad de información sobre cada Pokémon para que puedas conocerlos a todos y ser un maestro pokémon. </p>
   <button id="btn-start" class="button-start">Empezar</button>
 </div>
-<!--Segunda pantalla-muestra pokedex por default-->
-  <div id="second-view" class="hide">
-    <img src="img/Pokemon_Go.png" alt="pokemon" class="image2" >
+<!--Segunda pantalla-->
+ <div id="second-view" class="hide">
+   <img src="img/Pokemon_Go.png" alt="pokemon" class="image2" >
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn">
     <span class="navicon"></span></label>
@@ -30,26 +30,26 @@
         <li class="item-menu" id="btn-types"><img src= "img/filter.png" alt="icon-filter-menu" class= "iconpokedex">FILTRAR</li> 
         <li class="item-menu" id="btn-evolution"><img src= "img/evolucion.png" alt="icon-filter-menu" class= "iconpokedex">EVOLUCION</li> 
         </ul>
-  </div>  
-</header>
+ </div>  
+    </header>
 <main>
 <section id="pokemonSection" class="hide">
   <div class="pokedexSection">
-        <div id="search" class="hide">
-          <div class="searchstyle">
-            <input id="input-search" type="text" placeholder="Busca a tu pokemon" class="search"/>
-             <img src="img/descarga.png" alt="lupa" class="lupa" id="btn-search">
-          </div>
-        </div> 
-        <div id="orderList" class="hide">
-            <select name="type" id="orderselector">
-              <option value="" disabled selected>Ordenar por...</option>
-              <option value="asc">Ascendente</option>
-              <option value="desc">Descendente</option>
-              <option value="a-z">A-Z</option>
-              <option value="z-a">Z-A</option>
-            </select>
-          </div> 
+    <div id="search" class="hide">
+      <div class="searchstyle">
+        <input id="input-search" type="text" placeholder="Busca a tu pokemon" class="search"/>
+        <img src="img/descarga.png" alt="lupa" class="lupa" id="btn-search">
+      </div> 
+    </div> 
+    <div id="orderList" class="hide">
+      <select name="type" id="orderselector">
+         <option value="" disabled selected>Ordenar por...</option>
+         <option value="asc">Ascendente</option>
+         <option value="desc">Descendente</option>
+         <option value="a-z">A-Z</option>
+         <option value="z-a">Z-A</option>
+      </select>
+    </div> 
   </div>
   <div class="filterSection">
     <div id="filterList" class="hide">
@@ -98,13 +98,13 @@
        <div class="one"><input type="text" id="namepokemon" placeholder="Ingresa el nombre de tu pokemon" class="search"> </div> 
        <div class="one"><input type="text" id="numcaramelos" placeholder="Ingresa el numero de tus caramelos" class="search"> </div> 
        <div class="one"><button id="btn-calcular" class="btn-calcular">calcular</button> </div> 
-      </div> 
+    </div> 
 </div>
   <div id="pokemonList" class="pokemonList">
-  </div>
-    </section>
+</div>
+  </section>
   </main>
   <footer></footer>
-    <script type="module" src="main.js"></script>
+  <script type="module" src="main.js"></script>
   </body>
 </html>

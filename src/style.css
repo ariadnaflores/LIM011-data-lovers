@@ -12,6 +12,7 @@ body {
   margin-left: 2%;
   display: flex;
 }
+/*Aquí empiezan los estilos de nuestra primera pantalla*/
 .welcome {
   padding: 3%;
   text-align: center;
@@ -34,6 +35,7 @@ margin-left: 45%;
 .button-start:hover{
 background-color: #063971;
 }
+/*Aquí empiezan los estilos de nuestra segunda pantalla*/
 .image2 {
 width: 300px;
 display:flex;
@@ -68,7 +70,6 @@ margin:auto;
   padding: 28px 20px;
   position: relative;
 }
-
 .menu-icon .navicon {
   background:white;
   display: block;
@@ -76,7 +77,6 @@ margin:auto;
   position: relative;
   width: 18px;
 }
-
 .navicon:before,
 .navicon:after {
   background:white;
@@ -149,7 +149,6 @@ select, .search {
 /*Pantallas pequeñas*/
 @media all and (max-width: 500px) {
   .header {
-    /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }
   .menu-icon {
