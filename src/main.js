@@ -3,7 +3,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable object-curly-newline */
 import POKEMON from './data/pokemon/pokemon.js';
-import { filter, order, searchPokemons, filterTopshow } from './data.js';
+import { filter, order, searchPokemons, filterTopshow, calcular } from './data.js';
 
 const firstView = document.getElementById('first-view');
 const secondView = document.getElementById('second-view');
@@ -50,6 +50,7 @@ btnStart.addEventListener('click', () => {
 });
 const filterList = document.getElementById('filterList');
 const weaknessesList = document.getElementById('weaknessesList');
+const evolutionSection = document.getElementById('evolutionSection');
 
 // cambio de vista a pokedex
 const btnPokedex = document.getElementById('btn-pokedex');
@@ -57,6 +58,7 @@ btnPokedex.addEventListener('click', () => {
   firstView.classList.add('hide');
   filterList.classList.add('hide');
   weaknessesList.classList.add('hide');
+  evolutionSection.classList.add('hide');
   search.classList.remove('hide');
   orderList.classList.remove('hide');
   secondView.classList.remove('hide');
@@ -69,6 +71,7 @@ btnTypes.addEventListener('click', () => {
   firstView.classList.add('hide');
   orderList.classList.add('hide');
   search.classList.add('hide');
+  evolutionSection.classList.add('hide');
   secondView.classList.remove('hide');
   filterList.classList.remove('hide');
   weaknessesList.classList.remove('hide');
@@ -113,4 +116,42 @@ btnTop.addEventListener('click', () => {
   mostrarPokemon(filterTopshow(POKEMON));
   orderList.classList.add('hide');
   search.classList.add('hide');
+  evolutionSection.classList.add('hide');
+  filterList.classList.add('hide');
+  weaknessesList.classList.add('hide');
+});
+// Cambio de vista a Evolucion
+const btnEvolution = document.getElementById('btn-evolution');
+btnEvolution.addEventListener('click', () => {
+  evolutionSection.classList.remove('hide');
+  filterList.classList.add('hide');
+  weaknessesList.classList.add('hide');
+  orderList.classList.add('hide');
+  search.classList.add('hide');
+  pokemonList.innerHTML = '';
+});
+// Caalcular el numero de caramelos para la siguiente evolucion
+const namePokemon = document.getElementById('namepokemon');
+const numCaramelos = document.getElementById('numcaramelos');
+const btnCalcular = document.getElementById('btn-calcular');
+
+btnCalcular.addEventListener('click', () => {
+  const candy = calcular(POKEMON, namePokemon.value, numCaramelos.value);
+  const filtrado1 = POKEMON.filter((obj) => obj.name === namePokemon.value);
+  const filtrado2 = POKEMON.filter((obj) => obj.name === filtrado1[0].next_evolution[0].name);
+  let showEvolution;
+  filtrado1.forEach((obj) => {
+    showEvolution = ` 
+    <div class="wrap2">
+        <div class="boxEvolution">
+           <div><p class="letter2"> A tu ${namePokemon.value}</p> 
+           <img class="img-styles" src='${obj.img}'/> 
+           <p class="letter2"> le faltan ${candy} caramelos para evolucionar a: </p>
+           <img class="img-styles" src='${filtrado2[0].img}'/> 
+           <p class="letter2"> ${obj.next_evolution[0].name}</p>
+        </div>
+        </div>
+        </div> `;
+  });
+  pokemonList.innerHTML = showEvolution;
 });

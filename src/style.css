@@ -212,3 +212,45 @@ select, .search {
 .tarjeta-wrap:hover .tarjeta{
   transform: rotateY(180deg);
 }
+
+ /* Seccion evolucion */
+.evolutionSection {
+  display: flex;
+  flex-direction: row;
+  white-space: normal;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+}
+.one{
+  margin-left: 40px;
+  margin-top: 5px;
+}
+.btn-calcular{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  border-radius: 10px;
+  border: 2px solid ;
+  color: white;
+  background-color:#333;
+  cursor: pointer;
+  }
+.wrap2{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+}
+.boxEvolution{
+  backface-visibility: hidden;
+	text-align: center;
+	color:black;
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(255, 255, 255, 0.87);
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
