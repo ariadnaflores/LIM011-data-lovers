@@ -17,23 +17,24 @@ const mostrarPokemon = (arr) => {
   let showPokemon = '';
   arr.forEach((obj) => {
     showPokemon += ` 
-<div class="wrap">
-  <div class="tarjeta-wrap">
-    <div class="tarjeta">
-      <div class='box adelante'>
-      <div> <img class="img-styles" src='${obj.img}'/> </div>
-      <div> <p class="letter1"><b>${obj.name}</b></p> </div>
-      <div> <p class="letter2">N° ${obj.num}</p> </div>
-      </div> 
-      <div class='box atras' id='atras'> 
-        <p class="letter2">Altura: ${obj.height}</p>
-        <p class="letter2">Peso: ${obj.weight}</p>
-        <p class="letter2">Tipo:<br>${obj.type}</p>
-        <p class="letter2">Debilidades: <br>${obj.weaknesses}</p>
+      <div class="wrap">
+        <div class="tarjeta-wrap">
+          <div class="tarjeta">
+            <div class='box adelante'>
+              <div> <img class="img-styles" src='${obj.img}'/> </div>
+              <div> <p class="letter1"><b>${obj.name}</b></p> </div>
+              <div> <p class="letter2">N° ${obj.num}</p> </div>
+            </div> 
+            <div class="box atras" id="atras"> 
+              <p class="letter2">Altura: ${obj.height}</p>
+              <p class="letter2">Peso: ${obj.weight}</p>
+              <p class="letter2">Tipo:<br>${obj.type}</p>
+              <p class="letter2">Debilidades: <br>${obj.weaknesses}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div> `;
+    `;
   });
   pokemonList.innerHTML = showPokemon;
 };
@@ -142,8 +143,8 @@ const btnCalcular = document.getElementById('btn-calcular');
 // Calcular el numero de caramelos para la siguiente evolucion
 btnCalcular.addEventListener('click', () => {
   const candy = calcular(POKEMON, namePokemon.value, numCaramelos.value);
-  const filtrado1 = POKEMON.filter((obj) => obj.name === namePokemon.value);
-  const filtrado2 = POKEMON.filter((obj) => obj.name === filtrado1[0].next_evolution[0].name);
+  const filtrado1 = POKEMON.filter((obj) => obj.name.toLowerCase() === namePokemon.value);
+  const filtrado2 = POKEMON.filter((obj) => obj.name.toLowerCase() === filtrado1[0].next_evolution[0].name.toLowerCase());
   let showEvolution;
   filtrado1.forEach((obj) => {
     showEvolution = ` 

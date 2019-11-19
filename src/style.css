@@ -1,17 +1,20 @@
 .hide {
   display: none;
 }
+
 body {
   background-image:url(img/fondo1.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;  
 }
+
 .image1 {
   width: 35%;
   margin-left: 2%;
   display: flex;
 }
+
 /*Aquí empiezan los estilos de nuestra primera pantalla*/
 .welcome {
   padding: 3%;
@@ -21,16 +24,21 @@ body {
   color: white;
   background-color: rgba(51, 51, 51, 0.575);;
 }
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
 .button-start{
-font-family: 'Orbitron', sans-serif;
-font-size: 20px;
-border-radius: 15px;
-border: 2px solid ;
-color: white;
-background-color:#333;
-padding: 1%;
-cursor: pointer;
-margin-left: 45%;
+  
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid ;
+  color: white;
+  background-color:#333;
+  padding: 1%;
+  cursor: pointer;
+  margin-left: 45%;
 }
 .button-start:hover{
 background-color: #063971;
@@ -43,7 +51,7 @@ margin:auto;
 }
  /* Estilos de la barra menu */
  .header {
-  font-family: 'Orbitron', sans-serif;
+
   background: #333;
   display: flex;
   font-size: 30px;

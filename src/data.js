@@ -13,6 +13,7 @@ export const filter = (arr, propiedad, condition) => {
     }
   } return element;
 };
+
 // Función de ordenado por identificador y nombre
 export const order = (arr, propiedad, condition) => {
   let result;
@@ -26,7 +27,7 @@ export const order = (arr, propiedad, condition) => {
 
 // Función de buscar 
 export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
-  (obj) => obj.name.toLowerCase().startsWith(inputValue),
+  (pokemon) => pokemon.name.toLowerCase().startsWith(inputValue),
 );
 
 // Función de aparición top 10 más frecuentes
@@ -36,7 +37,7 @@ export const filterTopshow = (allpokemons) => allpokemons.filter(
 
 // Función de calcular los caramelos para la siguiente evolución 
 export const calcular = (array, nombre, caramelo) => {
-  const filtrado1 = array.filter((obj) => obj.name === nombre);
+  const filtrado1 = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
   const caramelofaltante = filtrado1[0].candy_count - caramelo;
   return caramelofaltante;
 };
