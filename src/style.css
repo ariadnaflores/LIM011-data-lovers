@@ -25,12 +25,8 @@ body {
   background-color: rgba(51, 51, 51, 0.575);;
 }
 
-.font-orbitron {
-  font-family: 'Orbitron', sans-serif;
-}
-
 .button-start{
-  
+  font-family: 'Orbitron', sans-serif;
   font-size: 20px;
   border-radius: 15px;
   border: 2px solid ;
@@ -51,7 +47,7 @@ margin:auto;
 }
  /* Estilos de la barra menu */
  .header {
-
+  font-family: 'Orbitron', sans-serif;
   background: #333;
   display: flex;
   font-size: 30px;
@@ -107,6 +103,7 @@ margin:auto;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 select, .search {
   border: #333;
   font-size: 18px;
@@ -116,12 +113,15 @@ select, .search {
   font-family: 'Orbitron', sans-serif;
   border-radius: 8px;
 }
+
 .searchstyle {
   background: white;
   border: none;
   font-size: 30px;
   align-items: center;
+  border-radius: 8px;
 }
+
 .lupa{
   width: 40px;
 }
@@ -224,7 +224,6 @@ select, .search {
 .evolutionSection {
   display: flex;
   flex-direction: row;
-  white-space: normal;
   flex-wrap: wrap;
   justify-content: center;
   width: auto;

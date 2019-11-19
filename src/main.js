@@ -144,7 +144,11 @@ const btnCalcular = document.getElementById('btn-calcular');
 btnCalcular.addEventListener('click', () => {
   const candy = calcular(POKEMON, namePokemon.value, numCaramelos.value);
   const filtrado1 = POKEMON.filter((obj) => obj.name.toLowerCase() === namePokemon.value);
-  const filtrado2 = POKEMON.filter((obj) => obj.name.toLowerCase() === filtrado1[0].next_evolution[0].name.toLowerCase());
+  const filtrado2 = POKEMON.filter(
+    (obj) => {
+      return obj.name.toLowerCase() === filtrado1[0].next_evolution[0].name.toLowerCase();
+    },
+  );
   let showEvolution;
   filtrado1.forEach((obj) => {
     showEvolution = ` 

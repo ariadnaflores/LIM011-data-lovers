@@ -25,7 +25,7 @@ export const order = (arr, propiedad, condition) => {
   return result;
 };
 
-// Función de buscar 
+// Función de buscar
 export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
   (pokemon) => pokemon.name.toLowerCase().startsWith(inputValue),
 );
@@ -35,7 +35,7 @@ export const filterTopshow = (allpokemons) => allpokemons.filter(
   (obj) => obj.spawn_chance > 2.5,
 );
 
-// Función de calcular los caramelos para la siguiente evolución 
+// Función de calcular los caramelos para la siguiente evolución
 export const calcular = (array, nombre, caramelo) => {
   const filtrado1 = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
   const caramelofaltante = filtrado1[0].candy_count - caramelo;

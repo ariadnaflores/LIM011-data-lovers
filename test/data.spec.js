@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 // importamos la función `example`
-import { filter, order, searchPokemons, filterTopshow } from '../src/data';
+import { filter, order, searchPokemons, filterTopshow, calcular } from '../src/data';
 
 const firstInput = [
   { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
@@ -112,5 +112,13 @@ const spawnchanceOutput = [
 describe('filterTopshow', () => {
   it('debería retornar un array con los pokemones ordenados por propiedad spawn_chance', () => {
     expect(filterTopshow(spawnchanceInput)).toEqual(spawnchanceOutput);
+  });
+});
+const pokemonCandyTest = [
+  { id: 4, name: 'Charmander', type: ['Fire'], candy_count: 25, weaknesses: ['Water', 'Ground', 'Rock'] },
+];
+describe('calcular cantidad de caramelos para evolucionar', () => {
+  it('debería retornar un array con los pokemones ordenados por propiedad candy_count', () => {
+    expect(calcular(pokemonCandyTest, 'Charmander', 21)).toEqual(4);
   });
 });
