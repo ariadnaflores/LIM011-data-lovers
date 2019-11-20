@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image:url(img/fondo1.png);
+  background-image:url(img/imagen2.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;  
@@ -187,7 +187,7 @@ select, .search {
 	color:black;
   font-family: 'Open Sans', sans-serif;
   background: rgba(255, 255, 255, 0.87);
-  height: 350px;
+  height: 400px;
   margin-top: 20px;
   border-radius: 15%;
   display: flex;
@@ -199,15 +199,31 @@ select, .search {
   top: 0px;
   width: 100%;
 }
+.adelante >span{
+  margin-bottom: -15px;
+}
 .img-styles {
-  height: 150px;
+  height: 170px;
 }
  /* letter 1 card adelante letter2 card atras */
 .letter1 {
-  font-size: 22px;
+  font-size: 27px;
+  margin: 0px;
 }
 .letter2 {
-  font-size: 18px;
+  font-size: 21px;
+}
+.info1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.info2 >span , .letter2 >span {
+  color: #A9A5A5;
+  font-size: 19px;
+}
+.info2 >p{
+  margin-bottom: 0px;
 }
 .tarjeta{
 	transform-style: preserve-3d;
@@ -253,7 +269,7 @@ select, .search {
 	color:black;
   font-family: 'Open Sans', sans-serif;
   background: rgba(255, 255, 255, 0.87);
-  height: 500px;
+  height: 600px;
   margin-top: 20px;
   border-radius: 15%;
   display: flex;

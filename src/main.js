@@ -24,12 +24,23 @@ const mostrarPokemon = (arr) => {
               <div> <img class="img-styles" src='${obj.img}'/> </div>
               <div> <p class="letter1"><b>${obj.name}</b></p> </div>
               <div> <p class="letter2">N° ${obj.num}</p> </div>
+              <span> <img src="img/pokeball.png"> </span>
+              <p class="letter2"><span>Tipo:</span> <br> ${obj.type.join(' & ')}</p>
             </div> 
             <div class="box atras" id="atras"> 
-              <p class="letter2">Altura: ${obj.height}</p>
-              <p class="letter2">Peso: ${obj.weight}</p>
-              <p class="letter2">Tipo:<br>${obj.type}</p>
-              <p class="letter2">Debilidades: <br>${obj.weaknesses}</p>
+              <div class='info1'> 
+                <div class='info2'> <p class="letter2">${obj.height}</p> <span>
+                Altura</span></div>
+                <div class='info2'> <p class="letter2">${obj.weight}</p> <span>
+                Peso</span> </div>
+              </div>
+              <div class='info1'> 
+                <div class='info2'> <p class="letter2">${obj.candy_count}
+                <img src="img/caramelo.png"></p><span>
+                Caramelos</span> </div>
+              </div >
+              <p class="letter2"> <span>Hora de aparicion:</span> ${obj.spawn_time}</p>
+              <p class="letter2"><span>Debilidades:</span> <br>${obj.weaknesses.join(', ')}</p>
             </div>
           </div>
         </div>
