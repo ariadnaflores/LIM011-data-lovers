@@ -7,6 +7,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;  
+  margin-left: 8% ;
+  margin-right: 8%;
 }
 
 .image1 {
@@ -24,8 +26,7 @@ body {
   color: white;
   background-color: rgba(51, 51, 51, 0.575);;
 }
-
-.button-start{
+.button-start, .btn-calcular{
   font-family: 'Orbitron', sans-serif;
   font-size: 20px;
   border-radius: 15px;
@@ -36,7 +37,7 @@ body {
   cursor: pointer;
   margin-left: 45%;
 }
-.button-start:hover{
+.button-start:hover, .btn-calcular:hover{
 background-color: #063971;
 }
 /*Aquí empiezan los estilos de nuestra segunda pantalla*/
@@ -104,7 +105,7 @@ margin:auto;
   justify-content: space-around;
 }
 
-select, .search {
+select, .search, .message {
   border: #333;
   font-size: 18px;
   height: 50px;
@@ -117,7 +118,6 @@ select, .search {
 .searchstyle {
   background: white;
   border: none;
-  font-size: 30px;
   align-items: center;
   border-radius: 8px;
 }
@@ -241,7 +241,7 @@ select, .search {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: right;
   width: auto;
 }
 .one{
@@ -249,13 +249,9 @@ select, .search {
   margin-top: 5px;
 }
 .btn-calcular{
-  font-family: 'Orbitron', sans-serif;
-  font-size: 22px;
-  border-radius: 10px;
-  border: 2px solid ;
-  color: white;
-  background-color:#333;
-  cursor: pointer;
+  height: 60px;
+  width: 150px;
+  margin-left: 0px;
   }
 .wrap2{
   width: 500px;
@@ -263,16 +259,19 @@ select, .search {
   margin-right: auto;
   margin-top: 28px;
 }
+.message{
+  background: #ffffff; 
+  margin-top: 0px;
+  width: 500px;
+}
 .boxEvolution{
-  backface-visibility: hidden;
 	text-align: center;
 	color:black;
   font-family: 'Open Sans', sans-serif;
   background: rgba(255, 255, 255, 0.87);
   height: 600px;
-  margin-top: 20px;
+  margin-top: 0px;
   border-radius: 15%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
