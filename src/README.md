@@ -104,7 +104,18 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
 
 ## 4. Diseño interfaz de usuario :
    ### Protipo de baja fidelidad 
-   
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/prototipobajafidelidad1.1.jpeg)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/prototipobajafidelidad2.jpeg)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/prototipobajafidelidad3.jpeg)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/prototipobajafidelidad4.jpeg)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/prototipobajafidelidad5.jpeg)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/prototipobajafidelidad6.jpeg)
 
 ## 5. Sitio web :
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/primera_pantalla.png)
@@ -124,6 +135,6 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mobiledos.png)
 
 ## 6. Feedback recibido :
--Usuario 1:
+-Usuario 1: 
 -Usuario 2:
 -Usuario 3:
