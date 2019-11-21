@@ -147,19 +147,19 @@ _"Yo, como usuario, quiero saber el numero de caramelos que me falta para que mi
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mobiledos.png)
 
 ## 6. Feedback recibido :
--Usuario 1: 
-_Quitar el boton de volver, ya que existe una barra de menú
--Usuario 2: 
-_Hacer más interactivo los cards de los pokemon
-_Que el buscador de pokemones realicé su función en tiempo real 
--Usuario 3: 
-_Que la barra de menú sea desplegable en vista mobile
-_Cambiar los colores a tonos más claros
--Usuario 4:
-_Agregar evoluciones de los pokemones
+### Usuario 1: 
+- Quitar el boton de volver, ya que existe una barra de menú
+### Usuario 2: 
+- Hacer más interactivo los cards de los pokemon
+- Que el buscador de pokemones realicé su función en tiempo real 
+### Usuario 3: 
+- Que la barra de menú sea desplegable en vista mobile
+- Cambiar los colores a tonos más claros
+### Usuario 4:
+- Agregar evoluciones de los pokemones
 
 ## 7. Otros:
--Figma en Web
+### Figma en Web
 https://www.figma.com/proto/3EI6dmp6Z0DMaHx02P8LQ0/Data-Lover-Pokemon-Web?node-id=1%3A3&scaling=contain
--Figma para versión mobile
+### Figma para versión mobile
 https://www.figma.com/proto/GKRnRnG5hmgwAMDs7kxiPA/Data-Lover-Pokemon-movil?scaling=scale-down&node-id=1%3A2
