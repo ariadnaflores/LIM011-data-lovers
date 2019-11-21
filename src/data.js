@@ -31,8 +31,8 @@ export const searchPokemons = (pokemonList, inputValue) => pokemonList.filter(
 );
 
 // Función de aparición top 10 más frecuentes
-export const filterTopshow = (allpokemons) => allpokemons.filter(
-  (obj) => obj.spawn_chance > 2.5,
+export const filterTopshow = (pokemonList) => pokemonList.filter(
+  (pokemon) => pokemon.spawn_chance > 2.5,
 );
 
 // Función de calcular los caramelos para la siguiente evolución
