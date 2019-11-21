@@ -103,8 +103,8 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
 - La vista será responsive: para que se pueda visualizar en cualquier dispositivo móvil.
 
 ## 4. Diseño interfaz de usuario :
-- Protipo de baja fidelidad 
-- Protipo de alta fidelidad 
+   ### Protipo de baja fidelidad 
+   
 
 ## 5. Sitio web :
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/primera_pantalla.png)
@@ -117,8 +117,10 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
 
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/vistaevolucionmenu.png)
 
+ ### Vista mobile
+
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mobileuno.png)
- 
+
  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mobiledos.png)
 
 ## 6. Feedback recibido :
