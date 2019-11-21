@@ -3,24 +3,24 @@
 /* eslint-disable import/prefer-default-export */
 
 // Función de filtrado por tipos de pokemon y debilidades
-export const filter = (arr, propiedad, condition) => {
+export const filter = (arr, property, condition) => {
   const element = [];
   for (let i = 0; i < arr.length; i += 1) {
-    for (let index = 0; index < arr[i][propiedad].length; index += 1) {
-      if (arr[i][propiedad][index] === condition) {
+    for (let index = 0; index < arr[i][property].length; index += 1) {
+      if (arr[i][property][index] === condition) {
         element.push(arr[i]);
       }
     }
   } return element;
 };
 
-// Función de ordenado por identificador y nombre
-export const order = (arr, propiedad, condition) => {
+// Función de ordenado por numero y nombre
+export const order = (arr, property, condition) => {
   let result;
   if (condition === 'a-z' || condition === 'asc') {
-    result = arr.sort((a, b) => (a[propiedad] > b[propiedad] ? 1 : -1));
+    result = arr.sort((a, b) => (a[property] > b[property] ? 1 : -1));
   } else {
-    result = arr.sort((a, b) => (a[propiedad] < b[propiedad] ? 1 : -1));
+    result = arr.sort((a, b) => (a[property] < b[property] ? 1 : -1));
   }
   return result;
 };
@@ -36,8 +36,8 @@ export const filterTopshow = (pokemonList) => pokemonList.filter(
 );
 
 // Función de calcular los caramelos para la siguiente evolución
-export const calcular = (array, nombre, caramelo) => {
-  const filtrado1 = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
-  const caramelofaltante = filtrado1[0].candy_count - caramelo;
-  return caramelofaltante;
+export const calculateCandies = (array, nombre, candy) => {
+  const compareName = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
+  const newCandies = compareName[0].candy_count - candy;
+  return newCandies;
 };
