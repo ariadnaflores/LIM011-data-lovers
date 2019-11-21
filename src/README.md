@@ -3,7 +3,8 @@
 Pokemon Go es una aplicación web que tiene como objetivo principal ser un catálogo virtual para brindar una gran variedad de información a cerca de cada pokemon para que puedas conocerlos mejor y ser un gran maestro pokemon, en esta aplicación nuestros usuarios van a poder conocer los tipos de pokemon que existen, sus debilidades, cuales son los pokemones con mayor frecuencia de aparición, cuantos caramelos te faltan para que tu pokemon evolucione, entre muchas cosas más es una web muy fácil de manejar sin necesidad de seguir instrucciones el usuario puede acceder a toda la información que contiene.
 
 ## 2. Mapa de Sitio Web:
-
+ 
+  ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mapadesitio.png)
 
 ## 3. Historias de usuario:
 
@@ -106,8 +107,19 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
 - Protipo de alta fidelidad 
 
 ## 5. Sitio web :
-- imagenes de la web
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/primera_pantalla.png)
 
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/pokedex.png)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/top10%20menu.png)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/filtrar.png)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/vistaevolucionmenu.png)
+
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mobileuno.png)
+ 
+ ![](https://github.com/ariadnaflores/LIM011-data-lovers/blob/prueba-ariadna/src/img/mobiledos.png)
 
 ## 6. Feedback recibido :
 -Usuario 1:
