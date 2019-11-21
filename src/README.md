@@ -102,6 +102,18 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
 
 - La vista será responsive: para que se pueda visualizar en cualquier dispositivo móvil.
 
+### Escenario 8
+_"Yo, como usuario, quiero saber el numero de caramelos que me falta para que mi pokemon evolucione."_
+
+**Criterios de aceptación:**
+
+- Que el usuario al ingresar a la vista evolución, vea un pequeño mensaje con dos cuadros de inputs. 
+
+- Que el usuario pueda ingresar el nombre del pokemon y el número de caramelos que posee en los 2 cuadros.
+
+- Que al darle click en el botón calcular, se le muestre el nombre y la imagen del pokemon a buscar, el número de caramelos que falta para la siguiente evolución, el cual también debe mostrar nombre e imagen.
+
+
 ## 4. Diseño interfaz de usuario :
    ### Protipo de baja fidelidad 
 
@@ -136,5 +148,18 @@ _"Yo, como usuario quiero ver los pokemones en orden ascendente y descendente se
 
 ## 6. Feedback recibido :
 -Usuario 1: 
--Usuario 2:
--Usuario 3:
+_Quitar el boton de volver, ya que existe una barra de menú
+-Usuario 2: 
+_Hacer más interactivo los cards de los pokemon
+_Que el buscador de pokemones realicé su función en tiempo real 
+-Usuario 3: 
+_Que la barra de menú sea desplegable en vista mobile
+_Cambiar los colores a tonos más claros
+-Usuario 4:
+_Agregar evoluciones de los pokemones
+
+## 7. Otros:
+-Figma en Web
+https://www.figma.com/proto/3EI6dmp6Z0DMaHx02P8LQ0/Data-Lover-Pokemon-Web?node-id=1%3A3&scaling=contain
+-Figma para versión mobile
+https://www.figma.com/proto/GKRnRnG5hmgwAMDs7kxiPA/Data-Lover-Pokemon-movil?scaling=scale-down&node-id=1%3A2
