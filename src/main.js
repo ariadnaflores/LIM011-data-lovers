@@ -3,7 +3,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable object-curly-newline */
 import POKEMON from './data/pokemon/pokemon.js';
-import { filter, order, searchPokemons, filterTopshow, calcular } from './data.js';
+import { filter, order, searchPokemons, filterTopshow, calculateCandies } from './data.js';
 
 // Declaración de variables
 const firstView = document.getElementById('first-view');
@@ -18,24 +18,24 @@ const mostrarPokemon = (arr) => {
   arr.forEach((obj) => {
     showPokemon += ` 
       <div class="wrap">
-        <div class="tarjeta-wrap">
-          <div class="tarjeta">
-            <div class='box adelante'>
+        <div class="card-wrap">
+          <div class="card">
+            <div class='box forward'>
               <div> <img class="img-styles" src='${obj.img}'/> </div>
               <div> <p class="letter1"><b>${obj.name}</b></p> </div>
               <div> <p class="letter2">N° ${obj.num}</p> </div>
               <span> <img src="img/pokeball.png"> </span>
               <p class="letter2"><span>Tipo:</span> <br> ${obj.type.join(' & ')}</p>
             </div> 
-            <div class="box atras" id="atras"> 
-              <div class='info1'> 
-                <div class='info2'> <p class="letter2">${obj.height}</p> <span>
+            <div class="box backward" id="backward""> 
+              <div class='extrainfo1'> 
+                <div class='extrainfo2'> <p class="letter2">${obj.height}</p> <span>
                 Altura</span></div>
-                <div class='info2'> <p class="letter2">${obj.weight}</p> <span>
+                <div class='extrainfo2'> <p class="letter2">${obj.weight}</p> <span>
                 Peso</span> </div>
               </div>
-              <div class='info1'> 
-                <div class='info2'> <p class="letter2">${obj.candy_count}
+              <div class='extrainfo1'> 
+                <div class='extrainfo2'> <p class="letter2">${obj.candy_count}
                 <img src="img/caramelo.png"></p><span>
                 Caramelos</span> </div>
               </div >
@@ -149,26 +149,26 @@ btnEvolution.addEventListener('click', () => {
 });
 
 const namePokemon = document.getElementById('namepokemon');
-const numCaramelos = document.getElementById('numcaramelos');
-const btnCalcular = document.getElementById('btn-calcular');
+const numberOfCandies = document.getElementById('numberOfCandies');
+const btnCalculate = document.getElementById('btn-calculate');
 // Calcular el numero de caramelos para la siguiente evolucion
-btnCalcular.addEventListener('click', () => {
-  const candy = calcular(POKEMON, namePokemon.value, numCaramelos.value);
-  const filtrado1 = POKEMON.filter((obj) => obj.name.toLowerCase() === namePokemon.value);
-  const filtrado2 = POKEMON.filter(
+btnCalculate.addEventListener('click', () => {
+  const candy = calculateCandies(POKEMON, namePokemon.value, numberOfCandies.value);
+  const wantedPokemon = POKEMON.filter((obj) => obj.name.toLowerCase() === namePokemon.value);
+  const nextEvolution = POKEMON.filter(
     (obj) => {
-      return obj.name.toLowerCase() === filtrado1[0].next_evolution[0].name.toLowerCase();
+      return obj.name.toLowerCase() === wantedPokemon[0].next_evolution[0].name.toLowerCase();
     },
   );
   let showEvolution;
-  filtrado1.forEach((obj) => {
+  wantedPokemon.forEach((obj) => {
     showEvolution = ` 
     <div class="wrap2">
         <div class="boxEvolution">
            <div><p class="letter2"> A tu ${namePokemon.value}</p> 
            <img class="img-styles" src='${obj.img}'/> 
            <p class="letter2"> le faltan ${candy} caramelos para evolucionar a: </p>
-           <img class="img-styles" src='${filtrado2[0].img}'/> 
+           <img class="img-styles" src='${nextEvolution[0].img}'/> 
            <p class="letter2"> ${obj.next_evolution[0].name}</p>
         </div>
         </div>
