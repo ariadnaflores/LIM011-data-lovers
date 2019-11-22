@@ -39,5 +39,5 @@ export const filterTopshow = (pokemonList) => pokemonList.filter(
 export const calculateCandies = (array, nombre, candy) => {
   const compareName = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
   const newCandies = compareName[0].candy_count - candy;
-  return newCandies;
+  return newCandies;3
 };

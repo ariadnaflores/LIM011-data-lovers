@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 // importamos la función `example`
-import { filter, order, searchPokemons, filterTopshow, calcular } from '../src/data';
+import { filter, order, searchPokemons, filterTopshow, calculateCandies } from '../src/data';
 
 const firstInput = [
   { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
@@ -119,6 +119,6 @@ const pokemonCandyTest = [
 ];
 describe('calcular cantidad de caramelos para evolucionar', () => {
   it('debería retornar un array con los pokemones ordenados por propiedad candy_count', () => {
-    expect(calcular(pokemonCandyTest, 'Charmander', 21)).toEqual(4);
+    expect(calculateCandies(pokemonCandyTest, 'Charmander', 21)).toEqual(4);
   });
 });
